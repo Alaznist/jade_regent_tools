@@ -3,10 +3,16 @@
 
 print("\nSuper-calculateur de la consommation journalière de la caravane !\n")
 
-voyageurs = 14
-chariots = 9
-don_consommation_efficace = -2
-chevaux = 1
+voyageurs = int(input("Combien de voyageurs possède la caravane ? : "))
+chariots = int(input("Combien de chariots possède la caravane ? : "))
+don_consommation_efficace = input("La caravane possède-t-elle le don 'consommation efficace' ? [Oui/Non]: ")
+while 'n' not in don_consommation_efficace.lower() and 'o' not in don_consommation_efficace.lower():
+    don_consommation_efficace = input("La caravane possède-t-elle le don 'consommation efficace' ? [Oui/Non]: ")
+if 'n' in don_consommation_efficace.lower():
+    don_consommation_efficace = 0
+else:
+    don_consommation_efficace = -2
+chevaux = int(input("Combien d'animaux supplémentaire consomment de la nourriture ? : "))
 anneau = int(input("Combien de personnes portent un anneau de subsistance ? : "))
 eclaireurs = int(input("Quel est le nombre d'éclaireuses et d'éclaireurs aujourd'hui ? : "))
 role_des_eclaireurs = int(input("Parmis ces éclaireuses, combien vont chercher de la nourriture ? : "))
