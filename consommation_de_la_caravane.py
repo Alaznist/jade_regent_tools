@@ -24,3 +24,10 @@ if stock <= 0:
     print("L'apport vous suffit pour la journée : pas besoin de taper dans votre stock !")
 else:
     print("Vous devez donc prélever seulement", stock,"unités de votre stock.")
+
+    
+if stock < 0 and role_des_eclaireurs > 0:
+    reste = abs(stock)
+    if reste >= (2*role_des_eclaireurs):
+        reste = 2*role_des_eclaireurs
+    print("\nPar ailleurs, vous pouvez stocker le surplus de nourriture rapporté par les éclaireuses aujourd'hui :", reste,"unités à ajouter dans les placards !")
